@@ -44,7 +44,7 @@
 ## Giao diện ứng dụng
 
 ### Màn hình đăng nhập
-![Màn hình đăng nhập](UI/login.png)
+![Màn hình đăng nhập](public/UI/login.jpg)
 **Tính năng chính:**
 - Form đăng nhập với validation đầy đủ
 - Hiển thị/ẩn mật khẩu với icon eye
@@ -54,7 +54,7 @@
 - Link đăng ký tài khoản mới
 
 ### Dashboard - Trang chủ
-![Dashboard](UI/dashboard.png)
+![Dashboard](public/UI/dashboard.jpg)
 **Tính năng chính:**
 - **Thống kê tổng quan**: 4 cards hiển thị metrics quan trọng
   - Tổng số bộ thẻ (1)
@@ -69,7 +69,7 @@
 - **Action buttons**: "Xem chi tiết" và "Học ngay"
 
 ### Tạo bộ thẻ mới
-![Tạo bộ thẻ mới](UI/create-deck.png)
+![Tạo bộ thẻ mới](public/UI/createDeck.jpg)
 **Tính năng chính:**
 - **Thông tin bộ thẻ**: Form nhập tên và mô tả
 - **Quản lý thẻ học**: Giao diện thêm thẻ động
@@ -80,7 +80,7 @@
 - **Breadcrumb navigation**: Điều hướng rõ ràng
 
 ### Chỉnh sửa bộ thẻ
-![Chỉnh sửa bộ thẻ](UI/edit-deck.png)
+![Chỉnh sửa bộ thẻ](public/UI/editDeck.jpg)
 **Tính năng chính:**
 - **Cập nhật thông tin**: Chỉnh sửa tên và mô tả bộ thẻ
 - **Quản lý thẻ học nâng cao**:
@@ -92,7 +92,7 @@
 - **Auto-save**: Lưu thay đổi tự động
 
 ### Chi tiết bộ thẻ
-![Chi tiết bộ thẻ](UI/deck-detail.png)
+![Chi tiết bộ thẻ](public/UI/deckDetail.jpg)
 **Tính năng chính:**
 - **Header thông tin**: Tên bộ thẻ và mô tả
 - **Thống kê chi tiết**:
@@ -108,12 +108,12 @@
 - **Chỉnh sửa**: Nút "Chỉnh sửa" ở góc phải
 
 ### Màn hình học tập
-![Màn hình học tập](UI/study.png)
+![Màn hình học tập](public/UI/studyScreen.jpg)
 **Tính năng chính:**
 - **Progress tracking**: "Thẻ 1/1" và thanh tiến độ 100%
 - **Study modes**: 
-  - "Lật thẻ" (active - màu xanh)
-  - "Trắc nghiệm " (inactive)
+  - "Lật thẻ" 
+  - "Trắc nghiệm " 
 - **Flashcard interface**:
   - Hiển thị nội dung: "tim hiểu, đoán ra, tính toán ra, giải ra"
   - Nút "Nhấn để lật lại" với icon refresh
@@ -153,7 +153,7 @@ npm run preview
 
 ### 1. Đăng ký/Đăng nhập
 - Truy cập trang đăng nhập
-- Tạo tài khoản mới hoặc đăng nhập (demo mode)
+- Tạo tài khoản mới hoặc đăng nhập
 
 ### 2. Tạo bộ thẻ đầu tiên
 - Click "Tạo bộ thẻ mới" trên Dashboard
