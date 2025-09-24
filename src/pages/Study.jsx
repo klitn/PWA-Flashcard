@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FiArrowLeft, FiCheckCircle, FiX } from 'react-icons/fi';
 import { DeckService, CardService } from '../services';
-import { calculateNextReview, shuffleArray } from '../utils';
+import { calculateNextReview, shuffleArray, validateQuizDeck } from '../utils';
 import FlashCard from '../components/FlashCard';
+import QuizCard from '../components/QuizCard';
 import ProgressBar from '../components/ProgressBar';
 
 const Study = () => {
@@ -21,6 +22,7 @@ const Study = () => {
   });
   const [isComplete, setIsComplete] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [quizValidation, setQuizValidation] = useState({ isValid: false, reason: '' });
 
   useEffect(() => {
     loadStudySession();
@@ -57,6 +59,16 @@ const Study = () => {
       correct: 0,
       wrong: 0
     });
+
+    // Validate if quiz mode is available
+    const validation = validateQuizDeck(deckData.cards);
+    setQuizValidation(validation);
+    
+    // Debug log for development
+    console.log('Quiz validation:', validation);
+    console.log('Total cards in deck:', deckData.cards.length);
+    console.log('Unique answers:', new Set(deckData.cards.map(card => card.back.trim())).size);
+
     setLoading(false);
   };
 
@@ -251,9 +263,12 @@ const Study = () => {
               className={`px-3 py-1 text-sm rounded-md ${
                 studyMode === 'multiple_choice'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : quizValidation.isValid 
+                    ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-50 text-gray-400 cursor-not-allowed'
               }`}
-              disabled
+              disabled={!quizValidation.isValid}
+              title={!quizValidation.isValid ? quizValidation.reason : 'Chuyển sang chế độ trắc nghiệm'}
             >
               Trắc nghiệm
             </button>
@@ -261,12 +276,20 @@ const Study = () => {
         </div>
       </div>
 
-      {/* Flash Card */}
+      {/* Study Card */}
       <div className="flex justify-center">
-        <FlashCard
-          card={currentCard}
-          onAnswer={handleAnswer}
-        />
+        {studyMode === 'flip_card' ? (
+          <FlashCard
+            card={currentCard}
+            onAnswer={handleAnswer}
+          />
+        ) : (
+          <QuizCard
+            card={currentCard}
+            allCards={deck.cards}
+            onAnswer={handleAnswer}
+          />
+        )}
       </div>
 
       {/* Session Stats */}

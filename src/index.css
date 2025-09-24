@@ -87,3 +87,51 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Custom styles for flashcard and quiz functionality */
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Quiz option animations */
+.quiz-option {
+  transition: all 0.2s ease-in-out;
+}
+
+.quiz-option:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-option:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Answer feedback animations */
+.quiz-result-correct {
+  animation: correctPulse 0.5s ease-in-out;
+}
+
+.quiz-result-incorrect {
+  animation: incorrectShake 0.5s ease-in-out;
+}
+
+@keyframes correctPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes incorrectShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}

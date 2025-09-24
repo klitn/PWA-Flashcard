@@ -108,6 +108,62 @@ export const validatePassword = (password) => {
   };
 };
 
+// Quiz utility functions
+export const generateQuizOptions = (correctAnswer, allAnswers, count = 4) => {
+  if (!correctAnswer || !allAnswers || allAnswers.length < count) {
+    return [];
+  }
+
+  // Filter out the correct answer from potential distractors
+  const distractors = allAnswers.filter(answer => 
+    answer !== correctAnswer && answer.trim() !== correctAnswer.trim()
+  );
+
+  if (distractors.length < count - 1) {
+    return [];
+  }
+
+  // Randomly select distractors
+  const selectedDistractors = shuffleArray(distractors).slice(0, count - 1);
+  
+  // Combine correct answer with distractors and shuffle
+  const options = shuffleArray([correctAnswer, ...selectedDistractors]);
+  
+  return options;
+};
+
+export const validateQuizDeck = (cards, minCards = 2) => {
+  // Allow quiz mode with as few as 2 cards
+  if (!cards || cards.length < minCards) {
+    return {
+      isValid: false,
+      reason: `Cần ít nhất ${minCards} thẻ để sử dụng chế độ trắc nghiệm.`
+    };
+  }
+
+  // For fewer than 4 cards, we can still create quiz with generic options
+  if (cards.length < 4) {
+    return {
+      isValid: true,
+      reason: 'Chế độ trắc nghiệm khả dụng (sẽ sử dụng một số lựa chọn chung).'
+    };
+  }
+
+  // Check if there are enough unique answers for full quiz experience
+  const uniqueAnswers = new Set(cards.map(card => card.back.trim().toLowerCase()));
+  if (uniqueAnswers.size < 4) {
+    return {
+      isValid: true,
+      reason: 'Chế độ trắc nghiệm khả dụng (sẽ sử dụng một số lựa chọn chung).'
+    };
+  }
+
+  return {
+    isValid: true,
+    reason: 'Bộ thẻ phù hợp hoàn toàn cho chế độ trắc nghiệm.'
+  };
+};
+
 // Debounce function
 export const debounce = (func, wait) => {
   let timeout;

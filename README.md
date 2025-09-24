@@ -17,6 +17,10 @@
 
 ### Học và ôn tập thông minh
 - **Chế độ lật thẻ**: Xem mặt trước → suy nghĩ → lật để kiểm tra đáp án
+- **Chế độ trắc nghiệm**: Kiểm tra kiến thức với câu hỏi 4 lựa chọn (A, B, C, D)
+  - Tự động tạo các lựa chọn sai từ thẻ khác trong bộ
+  - Hiển thị kết quả ngay lập tức với màu sắc trực quan
+  - Hiệu ứng animation khi trả lời đúng/sai
 - **Hệ thống SRS**: Lặp lại ngắt quãng tự động điều chỉnh theo độ khó
 - **Đánh giá học tập**: Phân loại thẻ theo mức độ (Đang học/Đã biết)
 - **Theo dõi tiến độ**: Thanh tiến độ hiển thị quá trình học trong phiên
@@ -34,12 +38,12 @@
 
 ## Công nghệ sử dụng
 
-- **Frontend**: React 18 + Vite (Fast Refresh)
-- **Styling**: Tailwind CSS (Utility-first)
+- **Frontend**: React 18 + Vite 
+- **Styling**: Tailwind CSS 
 - **Routing**: React Router DOM v6
-- **Icons**: React Icons (Feather Icons + Phosphor Icons)
+- **Icons**: React Icons 
 - **Storage**: localStorage API
-- **Build Tool**: Vite (ES Build)
+- **Build Tool**: Vite 
 
 ## Giao diện ứng dụng
 
@@ -57,10 +61,10 @@
 ![Dashboard](public/UI/dashboard.jpg)
 **Tính năng chính:**
 - **Thống kê tổng quan**: 4 cards hiển thị metrics quan trọng
-  - Tổng số bộ thẻ (1)
-  - Tổng số thẻ (3) 
-  - Tiến độ học (100%)
-  - Thành thạo (67%)
+  - Tổng số bộ thẻ
+  - Tổng số thẻ 
+  - Tiến độ học 
+  - Thành thạo 
 - **Sidebar navigation**: Menu điều hướng với các trang chính
 - **Danh sách bộ thẻ**: Hiển thị bộ thẻ với thông tin chi tiết
   - Tên: "Toeic Vocabulary"
@@ -96,9 +100,9 @@
 **Tính năng chính:**
 - **Header thông tin**: Tên bộ thẻ và mô tả
 - **Thống kê chi tiết**:
-  - Tổng thẻ: 3
-  - Đã học: 3/3 (100%) với progress bar xanh dương
-  - Thành thạo: 2/3 (67%) với progress bar xanh lá
+  - Tổng thẻ: 
+  - Đã học:với progress bar xanh dương
+  - Thành thạo: với progress bar xanh lá
 - **Danh sách thẻ**:
   - Hiển thị từng thẻ với số thứ tự
   - Badge trạng thái: "Đã học", "Thành thạo"
@@ -108,21 +112,30 @@
 - **Chỉnh sửa**: Nút "Chỉnh sửa" ở góc phải
 
 ### Màn hình học tập
-![Màn hình học tập](public/UI/studyScreen.jpg)
+![Màn hình học tập](public/UI/flashcard.jpg)
+![Màn hình học tập](public/UI/quiz.jpg)
 **Tính năng chính:**
 - **Progress tracking**: "Thẻ 1/1" và thanh tiến độ 100%
-- **Study modes**: 
-  - "Lật thẻ" 
-  - "Trắc nghiệm " 
+- **Study modes**:
+  - **"Lật thẻ"**: Chế độ học truyền thống
+  - **"Trắc nghiệm"**: Chế độ quiz với 4 lựa chọn A, B, C, D
 - **Flashcard interface**:
-  - Hiển thị nội dung: "tim hiểu, đoán ra, tính toán ra, giải ra"
+  - Hiển thị nội dung câu hỏi
   - Nút "Nhấn để lật lại" với icon refresh
+- **Quiz interface**:
+  - Hiển thị câu hỏi với 4 lựa chọn (A, B, C, D)
+  - Feedback màu sắc: xanh (đúng), đỏ (sai)
+  - Animation khi trả lời
+  - Tự động chuyển câu sau 1.5 giây
 - **Đánh giá học tập**:
   - "Đang học" (nút đỏ) - cần ôn lại
   - "Đã biết" (nút xanh) - đã thuộc
 - **Thống kê phiên học**: Hiển thị số liệu realtime
-  - Các chỉ số: 0, 0, 0, 0%
+  - Đã học, Đúng, Sai, Độ chính xác (%)
 - **Navigation**: Nút back và close (X)
+
+### Màn hình hoàn thành
+![Màn hình hoàn thành](public/UI/complete.jpg)
 
 ## Cài đặt và chạy
 
@@ -162,18 +175,28 @@ npm run preview
 
 ### 3. Bắt đầu học
 - Chọn bộ thẻ từ Dashboard
-- Click "Bắt đầu học" 
-- Lật thẻ và đánh giá độ khó
+- Click "Bắt đầu học"
+- Chọn chế độ học:
+  - **Lật thẻ**: Xem câu hỏi → suy nghĩ → lật thẻ → đánh giá
+  - **Trắc nghiệm**: Chọn đáp án từ 4 lựa chọn A, B, C, D
 
-### 4. Theo dõi tiến độ
+### 4. Sử dụng chế độ trắc nghiệm 
+- Yêu cầu: Bộ thẻ cần có ít nhất 4 thẻ với câu trả lời khác nhau
+- Click "Trắc nghiệm" để chuyển chế độ
+- Chọn đáp án A, B, C, hoặc D
+- Nhận feedback ngay lập tức (xanh = đúng, đỏ = sai)
+- Tự động chuyển câu tiếp theo sau 1.5 giây
+
+### 5. Theo dõi tiến độ
 - Xem thống kê trên Dashboard
 - Theo dõi số thẻ đã học/thành thạo
-
+- Kiểm tra độ chính xác trong chế độ trắc nghiệm
 
 ## Tác giả
 
 - **Developer**: Truong Ngoc Khanh Linh
-- **Contact**: klinhtruong04@gmail.com
+- **Contact**: <klinhtruong04@gmail.com>
+- **GitHub**: [PWA-Flashcard](https://github.com/klitn/PWA-Flashcard)
 
 
 
