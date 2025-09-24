@@ -43,11 +43,8 @@
 
 ## Giao diện ứng dụng
 
-### 🔐 Màn hình đăng nhập
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4e20c8d0-5c92-4b39-8074-bce4b7d8a8f8" alt="Login Screen" width="80%">
-</div>
-
+### Màn hình đăng nhập
+![Màn hình đăng nhập](UI/login.png)
 **Tính năng chính:**
 - Form đăng nhập với validation đầy đủ
 - Hiển thị/ẩn mật khẩu với icon eye
@@ -56,11 +53,8 @@
 - Chuyển hướng tự động sau đăng nhập thành công
 - Link đăng ký tài khoản mới
 
-### 🏠 Dashboard - Trang chủ
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/69c81c5f-8b8f-4c58-aa0e-123456789abc" alt="Dashboard" width="80%">
-</div>
-
+### Dashboard - Trang chủ
+![Dashboard](UI/dashboard.png)
 **Tính năng chính:**
 - **Thống kê tổng quan**: 4 cards hiển thị metrics quan trọng
   - Tổng số bộ thẻ (1)
@@ -74,11 +68,8 @@
   - Mô tả ngắn gọn
 - **Action buttons**: "Xem chi tiết" và "Học ngay"
 
-### ➕ Tạo bộ thẻ mới
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/a1b2c3d4-5e6f-7890-abcd-ef1234567890" alt="Create Deck" width="80%">
-</div>
-
+### Tạo bộ thẻ mới
+![Tạo bộ thẻ mới](UI/create-deck.png)
 **Tính năng chính:**
 - **Thông tin bộ thẻ**: Form nhập tên và mô tả
 - **Quản lý thẻ học**: Giao diện thêm thẻ động
@@ -88,11 +79,8 @@
 - **Nút thêm thẻ**: Mở rộng danh sách thẻ dễ dàng
 - **Breadcrumb navigation**: Điều hướng rõ ràng
 
-### ✏️ Chỉnh sửa bộ thẻ
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/b2c3d4e5-6f78-9012-3456-789abcdef012" alt="Edit Deck" width="80%">
-</div>
-
+### Chỉnh sửa bộ thẻ
+![Chỉnh sửa bộ thẻ](UI/edit-deck.png)
 **Tính năng chính:**
 - **Cập nhật thông tin**: Chỉnh sửa tên và mô tả bộ thẻ
 - **Quản lý thẻ học nâng cao**:
@@ -103,11 +91,8 @@
 - **Nút thêm thẻ**: Mở rộng bộ thẻ
 - **Auto-save**: Lưu thay đổi tự động
 
-### 📖 Chi tiết bộ thẻ
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/c3d4e5f6-7890-1234-5678-9abcdef01234" alt="Deck Detail" width="80%">
-</div>
-
+### Chi tiết bộ thẻ
+![Chi tiết bộ thẻ](UI/deck-detail.png)
 **Tính năng chính:**
 - **Header thông tin**: Tên bộ thẻ và mô tả
 - **Thống kê chi tiết**:
@@ -122,16 +107,13 @@
 - **Action buttons**: "Thêm thẻ mới" và "Bắt đầu học"
 - **Chỉnh sửa**: Nút "Chỉnh sửa" ở góc phải
 
-### 🎯 Màn hình học tập
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/d4e5f6g7-8901-2345-6789-abcdef012345" alt="Study Screen" width="80%">
-</div>
-
+### Màn hình học tập
+![Màn hình học tập](UI/study.png)
 **Tính năng chính:**
 - **Progress tracking**: "Thẻ 1/1" và thanh tiến độ 100%
 - **Study modes**: 
   - "Lật thẻ" (active - màu xanh)
-  - "Trắc nghiệm (Sớm)" (inactive)
+  - "Trắc nghiệm " (inactive)
 - **Flashcard interface**:
   - Hiển thị nội dung: "tim hiểu, đoán ra, tính toán ra, giải ra"
   - Nút "Nhấn để lật lại" với icon refresh

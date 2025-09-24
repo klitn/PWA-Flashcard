@@ -255,7 +255,7 @@ const Study = () => {
               }`}
               disabled
             >
-              Trắc nghiệm (Sớm)
+              Trắc nghiệm
             </button>
           </div>
         </div>
