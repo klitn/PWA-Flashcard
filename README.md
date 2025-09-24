@@ -43,9 +43,9 @@
 
 ## Giao diện ứng dụng
 
-### 🔐 Màn hình đăng nhập
+### Màn hình đăng nhập
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4e20c8d0-5c92-4b39-8074-bce4b7d8a8f8" alt="Login Screen" width="80%">
+  <img src="https://drive.google.com/file/d/1DDTihW02mND4z0aJLUmLEUOUg3dOkXF9/view?usp=sharing" alt="Login Screen" width="80%">
 </div>
 
 **Tính năng chính:**
@@ -56,9 +56,9 @@
 - Chuyển hướng tự động sau đăng nhập thành công
 - Link đăng ký tài khoản mới
 
-### 🏠 Dashboard - Trang chủ
+### Dashboard - Trang chủ
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/69c81c5f-8b8f-4c58-aa0e-123456789abc" alt="Dashboard" width="80%">
+  <img src="https://drive.google.com/file/d/1tbf9S65XtP3blwCaAQQ2Sfg7CZnWwVzp/view?usp=sharing" alt="Dashboard" width="80%">
 </div>
 
 **Tính năng chính:**
@@ -74,9 +74,9 @@
   - Mô tả ngắn gọn
 - **Action buttons**: "Xem chi tiết" và "Học ngay"
 
-### ➕ Tạo bộ thẻ mới
+### Tạo bộ thẻ mới
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a1b2c3d4-5e6f-7890-abcd-ef1234567890" alt="Create Deck" width="80%">
+  <img src="https://drive.google.com/file/d/1w61Zn49jwj_yV2vzBRB4m5UON3Ar8zDD/view?usp=sharing" alt="Create Deck" width="80%">
 </div>
 
 **Tính năng chính:**
@@ -88,9 +88,9 @@
 - **Nút thêm thẻ**: Mở rộng danh sách thẻ dễ dàng
 - **Breadcrumb navigation**: Điều hướng rõ ràng
 
-### ✏️ Chỉnh sửa bộ thẻ
+### Chỉnh sửa bộ thẻ
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b2c3d4e5-6f78-9012-3456-789abcdef012" alt="Edit Deck" width="80%">
+  <img src="https://drive.google.com/file/d/1GYg0wO0ng5Kb5lzRpaXpBOkVEWLF63uh/view?usp=sharing" alt="Edit Deck" width="80%">
 </div>
 
 **Tính năng chính:**
@@ -103,9 +103,9 @@
 - **Nút thêm thẻ**: Mở rộng bộ thẻ
 - **Auto-save**: Lưu thay đổi tự động
 
-### 📖 Chi tiết bộ thẻ
+### Chi tiết bộ thẻ
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/c3d4e5f6-7890-1234-5678-9abcdef01234" alt="Deck Detail" width="80%">
+  <img src="https://drive.google.com/file/d/1j4k9S3Yjjho0J8lyQeCp8F54Rpe-h8yv/view?usp=sharing" alt="Deck Detail" width="80%">
 </div>
 
 **Tính năng chính:**
@@ -122,16 +122,16 @@
 - **Action buttons**: "Thêm thẻ mới" và "Bắt đầu học"
 - **Chỉnh sửa**: Nút "Chỉnh sửa" ở góc phải
 
-### 🎯 Màn hình học tập
+### Màn hình học tập
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/d4e5f6g7-8901-2345-6789-abcdef012345" alt="Study Screen" width="80%">
+  <img src="https://drive.google.com/file/d/1GhMtkFr_0gZt2LTWI_2R-3e_XbPke-nc/view?usp=sharing" alt="Study Screen" width="80%">
 </div>
 
 **Tính năng chính:**
 - **Progress tracking**: "Thẻ 1/1" và thanh tiến độ 100%
 - **Study modes**: 
   - "Lật thẻ" (active - màu xanh)
-  - "Trắc nghiệm (Sớm)" (inactive)
+  - "Trắc nghiệm " (inactive)
 - **Flashcard interface**:
   - Hiển thị nội dung: "tim hiểu, đoán ra, tính toán ra, giải ra"
   - Nút "Nhấn để lật lại" với icon refresh
